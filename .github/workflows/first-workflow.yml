@@ -1,23 +1,17 @@
-name: First Workflow
+name: Pull Request Check
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
 jobs:
-  demo:
+  check:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v7
 
-      - name: Show Message
-        run: echo "GitHub Actions is running!"
-
-      - name: Show Files
-        run: ls -la
-      
-      - name: Show Git Version
-        run: git --version
+      - name: Validate
+        run: echo "Pull request validation passed!"
