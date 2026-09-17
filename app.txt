@@ -2,3 +2,4 @@ Version 1
 Work in progress
 Practice reset
 Small fix
+CI/CD practice
